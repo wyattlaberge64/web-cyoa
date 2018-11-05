@@ -477,9 +477,3 @@ function homeEarly() {
 
 }
 
-var start = function () {
-    setup();
-    town();
-}
-
-window.onload = start;
