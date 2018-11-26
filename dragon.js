@@ -29,8 +29,20 @@ function checkAnswers(answer) {  // Matches Scenes  - replace with yours
 	  else if (answer == "Go in"){
 		forest();
 	 }
-	  else if (answer == "Go Home"){
+	  else if (answer == "Go home"){
 		home();
+	 }
+	  else if (answer == "Go To Portal"){
+		portal();
+	 }
+	  else if (answer == "Look Around(Forest)") {
+		forestExamine();
+	 }
+	  else if (answer == "Go To Field") {
+		field(); 
+	 }
+	  else if (answer == "Go To Item Vender") {
+		itemVender();  
 	 }
 }
 
@@ -56,11 +68,18 @@ story("You a young dragon are heading back home from you treasure hunting journe
   
  function forest() {
   story("You go into the forest to see what you sort of an adventure is in there\
-  \n and any secrets you find along the way.")
+  \n and any secrets you find along the way.");
   
   choices = ["Go To Portal","Look Around(Forest)","Hang Out Here"];
   answer = setOptions(choices);
 } 
+
+ function forestExamine() {
+  story("You look around the forest to see\
+  \n a portal on the ground, a item vender and a clearing the leads to an open field.");
+  
+  choices = ["Go To Portal","Go To Field","Go To Item Vender"];
+}
  function home() {
   story("You decided to ignore the voice and go home\
   \n as you are heading back home you think to yourself\
